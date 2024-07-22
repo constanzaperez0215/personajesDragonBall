@@ -1,13 +1,17 @@
 body{
-    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8f5965f0-3e64-4b42-b738-3dc377f48797/devmd8q-ee5892c3-b6eb-4304-915d-c9b1f112b936.jpg/v1/fill/w_1007,h_794,q_70,strp/fondo_de_dragon_ball_by_francoalv7_devmd8q-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAwOSIsInBhdGgiOiJcL2ZcLzhmNTk2NWYwLTNlNjQtNGI0Mi1iNzM4LTNkYzM3N2Y0ODc5N1wvZGV2bWQ4cS1lZTU4OTJjMy1iNmViLTQzMDQtOTE1ZC1jOWIxZjExMmI5MzYuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.18MgFpCu02qElSSqRk3UVm4EqmHdlkijWn2deHJq_PM);
+    background-image: url(https://e0.pxfuel.com/wallpapers/756/610/desktop-wallpaper-anime-dragon-ball-z-background-dragon-ball-scenery.jpg);
     background-size: cover;
 }
 
+.titulo{
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+}
 .input{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 120px;
 }
 
 input{
@@ -25,7 +29,7 @@ input{
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
     font-size: 30px;
     font-weight: 900;
-    color: white;
+    color: rgb(255, 255, 255);
     overflow: hidden;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -61,7 +65,6 @@ input{
     opacity: 0;
     display: flex;
     justify-content: center;
-    
     border-radius: 15px;
     transition: all 0.4s;
     font-size: 0px;
