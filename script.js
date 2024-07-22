@@ -1,23 +1,39 @@
-const input = document.getElementById('input')
 const buscar = document.getElementById('search')
 const container = document.getElementById('container')
 
-const getData = async () => {
+buscar.addEventListener('input', (e) => {
+    const search = e.target.value
+    console.log(search)
+    render(search)
+  })
+
+const getData = async (query = '') => {
     try {
-        const res = await fetch('https://dragonball-api.com/api/characters')
+        const res = await fetch(`https://dragonball-api.com/api/characters/?name=${query}`)
         const data = await res.json()
-        console.log(data.items)
-        return data.items
+        console.log(data)
+        return data
     } catch (error) {
         console.error('Tienes un error en el consumo de la API')
     }
 }
 
-const render = async () => {
-    const data = await getData()
-    console.log(data)
+const render = async (query = '') => {
+    container.innerHTML = ''
+    const data = await getData(query)
+    // const personajes = data
+    
 
-    data.forEach(p => {
+    let personajes = [];
+    if (query === '') {
+        personajes = data.items // Asume que `data.items` contiene todos los personajes cuando `query` está vacío
+    } else {
+        personajes = data // Asume que `data.item` contiene el personaje buscado cuando `query` no está vacío
+    }
+
+    console.log(personajes)
+
+    personajes.forEach(p => {
         const card = document.createElement('div');
         card.className = 'card';
         card.style.backgroundImage = `url(${p.image})`;
@@ -27,7 +43,7 @@ const render = async () => {
                 <span>${p.name}</span>
             </div>
             <div class="second-content">
-                <span><img class="img" src="${p.image}" alt=""></span>
+                <p>${p.description}</p>
             </div>
         `;
 
